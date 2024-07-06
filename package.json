@@ -2,12 +2,13 @@
   "name": "webprodigies-fuzzie-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --experimental-https",
-    "build": "npm run build && prisma generate",
-    "start": "next start",
-    "lint": "next lint"
-  },
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "postinstall": "prisma generate"
+    },
+  
   "dependencies": {
     "@clerk/nextjs": "^4.29.9",
     "@hookform/resolvers": "^3.3.4",
