@@ -18,6 +18,13 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        sm: '0px',
+        md: '640px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -132,15 +139,5 @@ const config = {
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config
-
-// function addVariablesForColors({ addBase, theme }: any) {
-//   let allColors = flattenColorPalette(theme('colors'))
-//   let newVars = Object.fromEntries(
-//     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-//   )
-//   addBase({
-//     ':root': newVars,
-//   })
-// }
 
 export default config

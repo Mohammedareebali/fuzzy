@@ -11,9 +11,9 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center flex-col">
+    <main className="flex items-center justify-center flex-col w-screen">
       <Navbar />
-      <section className="h-screen w-full bg-neutral-950 rounded-md overflow-visible relative flex flex-col items-center antialiased">
+      <section className="h-screen  bg-neutral-950 rounded-md overflow-visible relative flex flex-col items-center antialiased w-screen">
         <div className="absolute inset-0 h-full w-full flex items-center px-5 py-24 bg-radial-at-t from-black to-gray-800"></div>
         <div className="flex flex-col mt-[-100px] md:mt-[-50px] px-4 sm:px-8">
           <ContainerScroll
@@ -36,15 +36,15 @@ export default function Home() {
         </div>
       </section>
       <InfiniteMovingCards
-        className="md:mt-24 mt-[-100px] px-4 sm:px-8"
+        className="md:mt-24 mt-[-100px] px-4 sm:px-8 w-screen"
         items={clients}
         direction="right"
         speed="slow"
       />
-      <section>
+      <section className='w-screen'>
         <HeroParallax products={products}></HeroParallax>
       </section>
-      <section className="mt-[-400px] md:mt-[-500px] px-4 sm:px-8">
+      <section className="mt-[-400px] md:mt-[-500px] px-4 sm:px-8 w-screen">
         <LampComponent />
         <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
           <CardContainer className="w-full md:w-auto">
